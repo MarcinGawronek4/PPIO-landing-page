@@ -1,0 +1,207 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="scss/main.css">
+	<link rel="stylesheet" type="text/css" href="onepageplugin/onepage-scroll.css">
+    <script src="onepageplugin/onepagescroll.js"></script>
+</head>
+<body>
+	<div class="main">
+		<section>
+			
+			<div class="leftSide">
+				<img class="bigLogo" src="img/logo.png"></img>
+			</div>
+			<div class="rightSideNewsletter">
+				<div class="newsletterSignup">
+					<p>Jeszcze pracujemy nad aplikacją. Zapisz się poniżej, abyś był na bieżąco</p>
+					<form>
+						<input class="email" type="text" placeholder="Adres Mailowy"><br />
+						<input class="name" type="text" placeholder="Twoje Imię"><br />
+						<label class="agreementContainer">Zgoda na przesyłanie maili
+  							<input type="checkbox">
+  							<span class="checkmark"></span>
+						</label>
+						<input class="button" type="submit" value="Zapisz się">
+
+					</form>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="container">
+				<div class="leftSide">
+					<img class="logo" src="img/logo.png"></img>
+					<div class="arrowContainerRight">
+						<div class="arrowRight">
+
+						</div>
+					</div>
+					<div class="textContainerSlideshow">
+						<p class="bigText">Ucz się gry na pianinie przy swoich ulubionych wykonawcach</p>
+						<p class="smallText">W PlayPiano czekają na ciebie tysiące utworów</p>
+					</div>
+				</div>
+				<div class="rightSide">
+					<div class="slideshowContainer">
+						<div class="slides">
+							<div class="slideshowItem">
+								
+								<img class="image" src="img/fast-forward.png" />
+							
+								<p class="bigText">Zapętlanie fragmentów utworu</p>
+								<p class="smallText">Podziel utwór na części, a następnie ćwicz momenty, które sprawiają Ci problem</p>
+							
+							</div> 
+							<div class="slideshowItem">
+							
+								<img class="image" src="img/hold.png" />
+								<p class="bigText">Tryb jednej ręki</p>
+								<p class="smallText">Podziel naukę utworu, skupiając się na jednej z dłoni, i zwyciężaj.</p>
+
+							</div>
+							<div class="slideshowItem">
+								<img class="image" src="img/stopwatch.png" />
+								<p class="bigText">Tryb czekania</p>
+								<p class="smallText">Nie musisz się nigdzie spieszyć. Aplikacja poczeka, aż naciśniesz odpowiednie klawisze</p>
+							</div>
+							<div class="slideshowItem">
+								<img class="image" src="img/checked.png" />
+								<p class="bigText">Tryb egzaminu</p>
+								<p class="smallText">Sprawdź jak dobrze opanowałeś dany utwór. W tym trybie możesz sprawdzić swoje umiejętności</p>
+							</div>
+							
+						</div>
+						<div class="slides">
+							<div class="secondSlideshowItem">
+								<img class="image" src="img/users.png" />
+								<p class="smallText">Gra na pianinie jest super! Pokaż znajomym czego się właśnie nauczyłeś</p>
+							</div>
+							<div class="secondSlideshowItem">
+								<img class="image" src="img/search.png" />
+								<p class="smallText">Wyszukaj spośród dziesiątek tysięcy utworów. Ucz się, grając to co lubisz</p>
+							</div>
+							<div class="secondSlideshowItem">
+								<img class="image" src="img/worldwide.png" />
+								<p class="smallText">Dziel się ze światem poradami oraz opiniami na temat utworów. Dołącz do międzynarodowej społeczności</p>
+							</div>
+							<div class="secondSlideshowItem">
+								<img class="image" src="img/idea.png" />
+								<p class="smallText">Bierz aktywny udział w rozwoju aplikacji. Pomóż nam stworzyć rozwiązanie perfekcyjne</p>
+							</div>
+
+						</div>
+					</div>
+					<div class="dots">
+		  				<span class="dot" onclick="currentSlide(1)"></span> 
+		  				<span class="dot" onclick="currentSlide(2)"></span> 
+		  			</div>
+		  			<div class="copyrightText">
+		  				<p>Autorem icon jest SMASHICONS z Flaticon. Dziękujemy! &hearts;</p>
+		  			</div>
+				</div>
+			</div>
+			
+		</section>
+		<section>
+			<div class="leftSide">
+        		<img class="logo" src="img/logo.png" />
+        		<div class="textContainerContact">
+            		<p class="greenText">Kontakt</p>
+            		<p>kontakt@playpiano.io</p>
+        		</div>
+			</div>
+			<div class="rightSide">
+				<div class="textContainerPiano">
+					<p>Nie możemy się doczekać, kiedy będziesz mógł korzystać z serwisu PlayPiano</p>
+				</div>
+				<div class="arrowContainerBottomRight">
+					<div class="arrowBottomRight">
+
+					</div>
+				</div>
+			</div>
+			<div class=pianoWrapper>
+    			<button class="turnOnKeyboard" v-on:keyup="keyMonitor" tabindex=-1>Włącz klawiaturę</button>
+    			<div class="wrapper">
+        			<ul class="piano">
+		            	<li class="whiteKey">
+		                	<div ref="65" class="anchor" v-on:click="playNote('C2.mp3')"></div>
+		            	</li>
+		            	<li class="whiteKey">
+		                	<div ref="83" class="anchor" v-on:click="playNote('D2.mp3')"></div>
+		                	<span class="blackKey" ref="81" v-on:click="playNote('Db2.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="68" class="anchor" v-on:click="playNote('E2.mp3')"></div>
+		                	<span class="blackKey" ref="87" v-on:click="playNote('Eb2.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="70" class="anchor" v-on:click="playNote('F2.mp3')"></div>
+		            	</li>
+		            	<li class="whiteKey">
+		                	<div ref="71" class="anchor" v-on:click="playNote('G2.mp3')"></div>
+		                	<span class="blackKey" ref="69" v-on:click="playNote('Gb2.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="72" class="anchor" v-on:click="playNote('A2.mp3')"></div>
+		                	<span class="blackKey" ref="82" v-on:click="playNote('Ab2.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="74" class="anchor" v-on:click="playNote('B2.mp3')"></div>
+		                	<span class="blackKey" ref="84" v-on:click="playNote('Bb2.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="75" class="anchor" v-on:click="playNote('C3.mp3')"></div>
+		            	</li>
+		            	<li class="whiteKey">
+		                	<div ref="76" class="anchor" v-on:click="playNote('D3.mp3')"></div>
+		                	<span class="blackKey" ref="89" v-on:click="playNote('Db3.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="90" class="anchor" v-on:click="playNote('E3.mp3')"></div>
+		                	<span class="blackKey" ref="85" v-on:click="playNote('Eb3.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="88" class="anchor" v-on:click="playNote('F3.mp3')"></div>
+		            	</li>
+		            	<li class="whiteKey">
+		                	<div ref="67" class="anchor" v-on:click="playNote('G3.mp3')"></div>
+		                	<span class="blackKey" ref="73" v-on:click="playNote('Gb3.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="86" class="anchor" v-on:click="playNote('A3.mp3')"></div>
+		                	<span class="blackKey" ref="79" v-on:click="playNote('Ab3.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="66" class="anchor" v-on:click="playNote('B3.mp3')"></div>
+		                	<span class="blackKey" ref="80" v-on:click="playNote('Bb3.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="78" class="anchor" v-on:click="playNote('C4.mp3')"></div>
+		            	</li>
+		            	<li class="whiteKey">
+		                	<div ref="77" class="anchor" v-on:click="playNote('D4.mp3')"></div>
+		                	<span class="blackKey" ref="219" v-on:click="playNote('Db4.mp3')"></span></li>
+		            	<li class="whiteKey">
+		                	<div ref="188" class="anchor" v-on:click="playNote('E4.mp3')"></div>
+		                	<span class="blackKey" ref="221" v-on:click="playNote('Eb4.mp3')"></span></li>
+        			</ul>
+    			</div>
+			</div>
+			<div class="background">
+			</div>
+		</section>
+	</div>
+<script>
+	onePageScroll(".main", {
+   sectionContainer: "section",
+   easing: "ease",
+
+   animationTime: 1000,
+   pagination: false,
+   updateURL: false,
+   beforeMove: function(index) {},
+   afterMove: function(index) {},
+   loop: false,
+   keyboard: true,
+   responsiveFallback: false
+
+
+});
+</script>
+<script src="app.js"></script>
+<script src="keyboard.js"></script>
+
+</body>
+</html>

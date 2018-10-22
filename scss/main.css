@@ -125,18 +125,18 @@
 }
 
 .slideshowItem{
-	display: inline-block;
+	display: block;
 	padding: 15px;
 	width: 450px;
-	margin-left: 23%;
+    margin: 0 auto;
 }
 
 .secondSlideshowItem{
-	display: inline-block;
+	display: block;
 	padding: 15px;
 	padding-top: 8%;
 	width: 450px;
-	margin-left: 23%;
+    margin: 0 auto;
 }
 
 .image{
